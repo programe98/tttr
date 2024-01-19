@@ -10,6 +10,72 @@
  
 
     <style>
+        
+
+    /*cookies*/
+           
+    .cookies-msg{
+      
+        border-radius: 2px;
+        width: 80%;
+    border-radius: 3px;
+    margin-top: 12px;
+        background-color: rgb(14, 14, 217);
+        display: flex;
+        position: fixed;
+        justify-content: center;
+    bottom: 0px;
+            display: none;
+       
+       
+    }
+    .cookies-msg.mostrar{
+        height: 150px;
+        margin-top: 12px;
+        justify-content: center;
+        display: block;
+        background-color: rgb(243, 243, 242);
+    }
+    .cookies-txt{
+        display: flex;
+        flex-direction: column;
+        margin-left: 12px;
+    
+    }
+    .botao-hhd{
+    padding: 8px;
+    width: 95%;
+    
+    margin-top: 12px;
+    border: none;
+    background-color: blue;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+    }
+    .botao-hhd:hover{
+        background-color: rgb(30, 30, 141);
+    }
+    .dhmswj{
+      color: blue;
+      border-bottom: 1px solid rgb(9, 77, 248);
+    }
+    .cookies-txt{
+        margin-top: 5px;
+    }
+    .avxan{
+    color: rgb(68, 69, 70);
+    }
+    .cookies-btn{
+        width: 100% ;
+        height: 40px;
+        justify-content: center;
+    }
+    
+    
+  
+  
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;600;700&family=Poppins:wght@300;400&display=swap');
 
 *{font-family: 'Inter', sans-serif;
@@ -385,6 +451,38 @@ p{
 
 
 
+
+<!--cokies-->
+
+<div class="cookies-msg" id="cookies-mdg">
+    <div class="cookies-txt">
+        <p  class="avxan">Usamos cookies para personalizar conteúdos e melhorar sua experiência em nosso site.<a style="color: rgb(0, 158, 227) ;" class="dhmswj" href="politica-de-cookies.html">saiba mais</a></p>
+   
+   
+  <div class="cookies-btn">
+    <button  style="color: white" onclick="aceito()"   class="botao-hhd">
+      entendi
+    </button>
+  </div>
+    </div>
+</div>
+<script>
+
+var msg = document.getElementById('cookies-mdg')
+
+function aceito(){
+localStorage.lgpd = "sim"
+msg.classList.remove('mostrar')
+}
+
+if(localStorage.lgpd == 'sim'){
+msg.classList.remove('mostrar')
+}else{
+msg.classList.add('mostrar')
+}
+
+</script>
+<!--cokies............-->
 
 
    
